@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%-include("./partials/head.ejs")  %>
+    <title>add new blogs</title>
+   
+</head>
+<body>
+    <%- include("./partials/nav.ejs") %>
+    <form action="/addblog" method="post" enctype="multipart/form-data" >
+      <div class="mb-3">
+        <label for="file" class="form-label">file</label>
+        <input type="file" class="form-control" id="exampleInputPassword1" name="coverImage">
+      </div>
+        <div class="mb-3">
+          <label for="title" class="title">Title</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="Title">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="body" class="form-label">Body</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="body">
+        </div>
+       
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+    <%- include("./partials/script.ejs") %>
+
+   
+</body>
+</html>
